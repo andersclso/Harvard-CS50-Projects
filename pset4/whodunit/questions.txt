@@ -1,0 +1,12 @@
+1.  stdint.h is a header file that allows programmers access to a set of typedefs that specify exact-width integer types, together with the min and max allowable values for each type.
+2.  Using the following typedefs allows you to assign int variables with a predetermined size or width, meaning it occupies a certain amount of memory, no matter what.
+3.  BYTE is 1 Byte, DWORD is 4 Bytes, LONG is 4 Bytes, and WORD is 2 Bytes.
+4.  The first two bytes of any BMP file must be BM in ASCII or 0x42 0x4D in Hexadecimal
+5.  bfSize is the size of the whole BMP File while biSize is the size of the BITMAPINFOHEADER file and is constant as it is always equal to 40 Bytes.
+6.  If biHeight is negative, it means the BMP file is a top-down BIP with the origin at the upper left corner
+7.  biBitCount specifies the BMP's bits per pixel or color depth
+8.  fopen will return NULL in lines 24 or 32 of copy.c if you do not provide the command line with a valid infile and outfile.
+9.  The third argument to fread is always 1 in our code because we are only reading 1 element/pixel at a time in this program.
+10. Line 65 will add 3 to the padding if the bi.biWidth is 3 since the amount of bytes per scanline must be a multiple of 4.
+11. fseek is a function that allows you to set a pointer at a specific file position by asking you how many bytes to moves the pointer
+12. SEEK_CUR just means to start at the current pointer position when utilizing fseek.
