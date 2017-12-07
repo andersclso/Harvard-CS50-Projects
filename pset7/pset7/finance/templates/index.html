@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio Overview
+{% endblock %}
+
+{% block main %}
+    <table class="index-table">
+        <tr><td class="index-titles">Holdings</td><td class="index-titles">Shares</td><td class="index-titles">Price</td><td class="index-titles">TOTAL</td></tr>
+                {% for company in companies %}
+                    <tr>
+                        <td class="index-holdings">{{ company["ticker"] }}</td>
+                        <td class="index-holdings">{{ company["amount"] }}</td>
+                        <td class="index-holdings">{{ company["curprice"] }}</td>
+                        <td class="index-holdings">{{ company["total"] }}</td>
+                    </tr>
+                {% endfor %}
+    </table>
+
+    <p class="cash">Cash Balance: <span>{{ cash }}</span></p>
+    <p class="tpv">Present Value of Portfolio: <span>{{ TPV }}</span></p>
+{% endblock %}

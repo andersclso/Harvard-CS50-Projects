@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="index-table">
+        <tr><td class="index-titles">Transaction</td><td class="index-titles">Ticker</td><td class="index-titles">Amount</td><td class="index-titles">Price</td><td class="index-titles">Total</td><td class="index-titles">Date</td><td class="index-titles">Time</td></tr>
+                {% for data in history %}
+                    <tr>
+                        <td class="index-holdings">{{ data["type"] }}</td>
+                        <td class="index-holdings">{{ data["ticker"] }}</td>
+                        <td class="index-holdings">{{ data["amount"] }}</td>
+                        <td class="index-holdings">{{ data["price"] }}</td>
+                        <td class="index-holdings">{{ data["total"] }}</td>
+                        <td class="index-holdings">{{ data["date"] }}</td>
+                        <td class="index-holdings">{{ data["time"] }}</td>                        
+                    </tr>
+                {% endfor %}
+    </table>
+{% endblock %}
